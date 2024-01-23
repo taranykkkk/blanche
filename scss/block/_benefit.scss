@@ -1,0 +1,11 @@
+.benefit {
+}
+.benefit__title {
+	font-size: clamp(15px, -0.063rem + 5vw, 24px);
+	font-weight: 700;
+	margin-bottom: clamp(10px, -0.486rem + 5.56vw, 20px);
+}
+.benefit__text {
+	line-height: 1.65;
+	font-size: clamp(14px, 0.661rem + 1.07vw, 17px);
+}

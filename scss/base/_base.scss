@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap');
+
+html, body {
+	font-family: "Arsenal", sans-serif;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1230px;
+}
+
+.title-2 {
+	font-size: clamp(22px, -0.054rem + 7.14vw, 42px);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+.hiddingForCart {
+	z-index: 0;
+}
+
+@mixin desktop(){
+	@media (max-width: 1120px) {
+		@content;
+	}
+	
+}
+
+@mixin tablet(){
+	@media (max-width: 740px) {
+		@content;
+	}
+	
+}
+
+@mixin mobile-xl(){
+	@media (max-width: 620px) {
+		@content;
+	}
+	
+}

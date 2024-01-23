@@ -1,0 +1,59 @@
+.card {
+	position: relative;
+	width: 280px;
+	background-color: #cdbce191;
+}
+.card__link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.card__photo {
+	text-align: center;
+	margin-top: 40px;
+
+}
+.card__img {
+	max-width: 250px;
+}
+.card__desc {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	height: 175px;
+	border-radius: 20px 20px 0 0;
+    padding: 14px 22px 28px;
+}
+.card__title {
+	font-size: 22px;
+	font-weight: 700;
+}
+.card__footer {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__price {
+	font-size: 19px;
+	font-weight: 700;
+
+	&::before {
+		content: '₴';
+	}
+}
+.card__btn {
+	font-size: 0;
+	height: 48px;
+	width: 48px;
+	background-color: #8b70aa;
+	border-radius: 50%;
+	z-index: 3;
+
+	transition: opacity 0.2s ease-in;
+
+	&:hover {
+		opacity: 0.6;
+	}
+}

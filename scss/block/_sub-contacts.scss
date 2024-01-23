@@ -1,0 +1,44 @@
+#contacts {
+	position: relative;
+}
+
+
+
+.nav-list__sub-contacts {
+	background-color: #8b70aa8c;
+    padding: 20px;
+    position: absolute;
+    width: 170px;
+    top: 100%;
+    left: -40px;
+    opacity: 0;
+    pointer-events: none;
+
+
+}
+.sub-contacts {
+	display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sub-contacts__item {
+
+	a {
+		color: #fff;
+		transition: color 0.2s ease-in;
+
+		&:hover {
+			color: #8b70aa;
+		}
+	}
+}
+.phone__num {
+}
+.instagram {
+}
+
+
+.nav-list__item:hover .nav-list__sub-contacts {
+    opacity: 1;
+    pointer-events: all;
+}

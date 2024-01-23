@@ -1,0 +1,20 @@
+.benefits {
+	padding: clamp(20px, -0.568rem + 9.09vw, 100px) 0;
+}
+
+.befefits__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: clamp(20px, 0.074rem + 5.88vw, 60px) 20px;
+
+	@include desktop(){
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include mobile-xl(){
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+.benefits__title {
+	max-width: 260px;
+}

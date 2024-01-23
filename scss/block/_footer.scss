@@ -1,0 +1,88 @@
+.footer {
+	padding: 50px 0;
+	background-color: #56059775;
+	color: white;
+}
+.info {
+	padding: 0 clamp(10px, -2.708rem + 16.67vw, 40px);
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-evenly;
+	gap: 80px;
+
+	@include tablet() {
+		flex-direction: column;
+		gap: 30px;
+	}
+}
+.footer__about-us {
+
+	h3 {
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	p {
+		line-height: 0.9;
+		text-align: justify;
+	}
+}
+.location {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+
+
+	iframe {
+		max-width: 300px;
+    	max-height: 100px;
+    	border-radius: 40px;
+
+    	@include tablet(){
+			max-width: clamp(220px, -4.345rem + 90.48vw, 600px);
+		}
+	}
+
+	
+}
+
+.address {
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.social__media {
+	display: flex;
+	padding: 0 40px;
+	gap: clamp(10px, -0.754rem + 6.9vw, 50px);
+	align-items: center;
+	justify-content: center;
+
+	@include mobile-xl(){
+		flex-direction: column;
+	}
+
+	a {
+		color: #fff;
+	}
+}
+.lavanda__logo {
+	position: relative;
+	font-size: 20px;
+	font-weight: 700;
+	max-width: 260px;
+
+	@include mobile-xl(){
+		font-size: 17px;
+	}
+
+	img {
+		max-width: 150px;
+		position: absolute;
+		top: -60px;
+    	left: -90px;
+	}
+}

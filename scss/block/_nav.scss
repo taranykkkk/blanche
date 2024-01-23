@@ -1,0 +1,27 @@
+.nav__header {
+	padding: 0 clamp(5px, -0.028rem + 1.7vw, 20px);
+	margin-bottom: clamp(20px, -1.509rem + 13.79vw, 100px);
+	display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+	align-items: center;
+	height: clamp(50px, 0.17rem + 14.77vw, 180px);
+	gap: 10px;
+}
+.nav-list {
+	display: inline-flex;
+    gap: clamp(15px, -0.767rem + 8.52vw, 90px);
+    justify-content: flex-end;
+    white-space: nowrap;
+
+}
+.nav-list__link {
+	font-weight: 700;
+	color: #fff;
+	font-size: clamp(12px, 0.523rem + 1.14vw, 22px);
+	transition: color 0.2s ease-in;
+
+	&:hover {
+		color: #8b70aa;
+	}
+}
+

@@ -1,0 +1,36 @@
+.header {
+	position: relative;
+	z-index: 1;
+	background-image: url('./../img/background-img/bg-img-2.jpg'), ;
+	aspect-ratio: 1200 / 1084;
+	background-size: cover;
+}
+
+.header__wrapper {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.header__content {
+	text-align: center;
+}
+
+.header__title {
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: bold;
+	font-size: clamp(30px, -0.757rem + 13.16vw, 80px);
+	text-transform: capitalize;
+	text-wrap: balance;
+	line-height: 0.8;
+    letter-spacing: -1px;
+    margin-bottom: clamp(15px, -0.006rem + 4.72vw, 40px);
+    text-shadow: 12px 7px 9px rgba(0,0,0,0.76);
+}
+
+.header__content p {
+	color: rgba(255, 255, 255, 0.8);
+	font-size: clamp(15px, 0.371rem + 2.83vw, 30px);
+	text-wrap: balance;
+	max-width: 740px;
+	margin: 0 auto;
+	text-shadow: 12px 7px 9px rgba(0,0,0,0.76);
+}

@@ -1,0 +1,125 @@
+.modal__cart-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s ease-in;
+}
+.modal__cart {
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
+	padding: 20px clamp(15px, -0.104rem + 5.21vw, 40px);
+	width: clamp(300px, 7.386rem + 56.82vw, 800px);
+
+	hr {
+	  background: #8e2cb79e;
+      height: 0.5px;
+      margin-bottom: 10px;
+	}
+}
+.modal__cart-nav {
+	display: flex;
+	justify-content: space-between;
+}
+.modal__title {
+	font-size: 24px;
+    font-weight: 700;
+    color: #8f898fe0;
+    position: relative;
+
+    img {
+    	max-width: 50px;
+    	position: absolute;
+    	top: -8px;
+    	left: 168px;
+    }
+}
+.cart__product {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr 1fr 1fr;
+	column-gap: clamp(10px, -0.625rem + 6.25vw, 40px);
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	background-color: #bbb9b91a;
+	padding: 0 5px;
+}
+.cart__product-img {
+	img {
+		max-width: clamp(70px, 1.042rem + 16.67vw, 100px);
+	}
+}
+.cart__product-name {
+	font-size: clamp(8px, 0.167rem + 1.67vw, 16px);
+}
+.cart__product-count {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+.count__btn {
+    font-weight: 700;
+    padding-bottom: 1px;
+    transition: opacity 0.2s ease-in;
+	
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.count_quantity {
+	width: 25px;
+    height: 18px;
+    line-height: 1.9;
+    text-align: center;
+    background-color: #c1c1c16b;
+    border-radius: 5px;
+	font-size: clamp(8px, 0.167rem + 1.67vw, 16px);
+
+}
+.cart__product-price {
+	font-size: clamp(8px, 0.167rem + 1.67vw, 16px);
+}
+.cart__product-del {
+	justify-self: flex-end;
+}
+.product-del {
+	padding-right: 10px;
+	font-size: clamp(10px, 0.196rem + 2.14vw, 16px);
+	transition: opacity 0.2s ease-in;
+	
+	&:hover {
+		opacity: 0.7;
+	}
+
+}
+.cart__submit-wrapper {
+	display: flex;
+	justify-content: flex-end;
+}
+.cart__product-submit {
+	font-size: clamp(12px, 0.5rem + 1.25vw, 18px);
+    border-radius: 5px;
+	background-color: #e1e1e1;
+	padding: 0 5px;
+	transition: opacity 0.2s ease-in;
+	
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.modal__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: 0;
+}

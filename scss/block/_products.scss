@@ -1,0 +1,13 @@
+.products {
+	padding: clamp(10px, -0.754rem + 6.9vw, 50px) 0;
+}
+
+.products__title {
+	text-align: center;
+}
+
+.products__slider {
+	display: flex;
+	justify-content: center;
+	margin-top: clamp(20px, -0.329rem + 7.89vw, 50px);
+}
