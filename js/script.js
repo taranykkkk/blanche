@@ -157,6 +157,7 @@ modalCart.addEventListener('click', function(event){
 //Смс про підтвердження замовлення
 const submitForm = document.querySelector('[data-btn="submit"]')
 submitForm.addEventListener('click', function showMessage(e){
+  e.preventDefault()
   let promiseValueLenght = true;
 
   Array.from(document.querySelector('fieldset').children).forEach(el => {
