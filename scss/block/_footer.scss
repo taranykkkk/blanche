@@ -67,6 +67,9 @@
 
 	a {
 		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 .lavanda__logo {
@@ -74,6 +77,7 @@
 	font-size: 20px;
 	font-weight: 700;
 	max-width: 260px;
+	text-align: center;
 
 	@include mobile-xl(){
 		font-size: 17px;

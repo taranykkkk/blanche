@@ -2,14 +2,9 @@
 	position: relative;
 	width: 280px;
 	background-color: #cdbce191;
+	border-radius: 5px;
 }
-.card__link {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-}
+
 .card__photo {
 	text-align: center;
 	margin-top: 40px;
@@ -21,19 +16,19 @@
 .card__desc {
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
-	height: 175px;
+	gap: 10px;
 	border-radius: 20px 20px 0 0;
     padding: 14px 22px 28px;
+}
+.card__header {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .card__title {
 	font-size: 22px;
 	font-weight: 700;
-}
-.card__footer {
-	display: flex;
-    justify-content: space-between;
-    align-items: center;
+	
 }
 .card__price {
 	font-size: 19px;
@@ -43,17 +38,23 @@
 		content: '₴';
 	}
 }
+.card__footer {
+	display: flex;
+    justify-content: flex-end;
+}
 .card__btn {
-	font-size: 0;
-	height: 48px;
-	width: 48px;
 	background-color: #8b70aa;
-	border-radius: 50%;
-	z-index: 3;
-
+	border-radius: 5px;
 	transition: opacity 0.2s ease-in;
+
 
 	&:hover {
 		opacity: 0.6;
 	}
+}
+
+.message__add {
+	margin-right: 10px;
+	font-weight: 700;
+	transition: all 0.2s ease-in;
 }

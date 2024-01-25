@@ -16,6 +16,9 @@
 	padding: 20px clamp(15px, -0.104rem + 5.21vw, 40px);
 	width: clamp(300px, 7.386rem + 56.82vw, 800px);
 }
+.order__wrapper-title {
+	position: relative;
+}
 .order-confirm__title {
 	font-size: 24px;
     font-weight: 700;
@@ -29,7 +32,11 @@
     	left: 143px;
     }
 }
-
+.order__close {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
 .order-confirm__text {
 
 }

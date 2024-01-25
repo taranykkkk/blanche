@@ -7,7 +7,7 @@
 }
 
 .products__slider {
-	display: flex;
-	justify-content: center;
+	position: relative;
+	padding: 0 20px;
 	margin-top: clamp(20px, -0.329rem + 7.89vw, 50px);
 }

@@ -19,7 +19,11 @@ html, body {
 .hidden {
 	opacity: 0;
 	pointer-events: none;
+	z-index: -1;
+	transition: all 0.2s ease-in;
 }
+
+
 .hiddingForCart {
 	z-index: 0;
 }

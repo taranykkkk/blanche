@@ -15,7 +15,7 @@
 }
 
 .header__title {
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 1);
 	font-weight: bold;
 	font-size: clamp(30px, -0.757rem + 13.16vw, 80px);
 	text-transform: capitalize;
@@ -27,7 +27,7 @@
 }
 
 .header__content p {
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 1);
 	font-size: clamp(15px, 0.371rem + 2.83vw, 30px);
 	text-wrap: balance;
 	max-width: 740px;

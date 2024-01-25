@@ -6,13 +6,16 @@
 
 .nav-list__sub-contacts {
 	background-color: #8b70aa8c;
-    padding: 20px;
+    padding: 10px 20px;
     position: absolute;
-    width: 170px;
+    width: 180px;
     top: 100%;
     left: -40px;
     opacity: 0;
     pointer-events: none;
+    transition: all 0.4s ease-in;
+    text-align: center;
+    border-radius: 5px;
 
 
 }
@@ -22,6 +25,9 @@
     gap: 10px;
 }
 .sub-contacts__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	a {
 		color: #fff;
@@ -41,4 +47,6 @@
 .nav-list__item:hover .nav-list__sub-contacts {
     opacity: 1;
     pointer-events: all;
+    transition: all 0.4s ease-in;
+
 }

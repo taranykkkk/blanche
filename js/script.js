@@ -38,7 +38,6 @@ if(cartStorage.length){
 cards.forEach(card => {
 
   card.addEventListener('click', function(e){
-      
       // Дістаєм значення з карточки продукту
       const name = card.querySelector('.card__title').innerText
       const price = card.querySelector('.card__price').innerText
@@ -47,9 +46,8 @@ cards.forEach(card => {
       const id = card.dataset.id
       const product = {imgSrc, name, price, quantity, id}
 
-
     if(e.target.closest('.card__btn')){
-      //Шукаєм в массиві індекс елемент в який співпадає з іменем продукту
+      //Шукаєм в массиві індекс елементу в який співпадає з іменем продукту
       let cartIndex = cartStorage.findIndex(el => el.name === name)
       
       //Перевірка на те чи є в массиві елемент зі схожим іменем продукту
@@ -84,9 +82,9 @@ function renderCartItem(imgSrc, name, quantity, price, id){
             <li class="cart__product-img"><img src="${imgSrc}" alt=""></li>
             <li class="cart__product-name">${name}</li>
             <li class="cart__product-count">
-              <button class="count__btn" data-btn="plus">+</button>
-              <input class="count_quantity" value="${quantity}">
               <button class="count__btn" data-btn="minus">-</button>
+              <input class="count_quantity" value="${quantity}">
+              <button class="count__btn" data-btn="plus">+</button>
             </li>
             <li class="cart__product-price">${price}</li>
             <li class="cart__product-del">
@@ -144,7 +142,9 @@ modalCart.addEventListener('click', function(event){
     //Закриваємо корзину
   if(event.target.dataset.btn === 'closeCart' || cartStorage.length === 0){
       document.querySelector('.modal__cart-wrapper').classList.add('hidden')
+
       document.body.style.overflow = 'visible'
+
   }
   //Модальне вікно підтвердження замовлення
   if(event.target.dataset.btn === 'order-submit'){
@@ -201,6 +201,15 @@ submitForm.addEventListener('click', function showMessage(e){
     promiseValueLenght = true
   }
 })
+//Закриття підтвердження замовлення
+const orderModal = document.querySelector('.modal__order-confirm')
+orderModal.addEventListener('click', function(e){
+  if(e.target.closest('.order__close')){
+    this.classList.add('hidden')
+    document.body.style.overflow = 'visible'
+
+  }
+})
 
 //Показ корзини
 cartBtn.addEventListener('click', function(){
@@ -229,6 +238,78 @@ function showQuantity(){
     
 }
 
+//За індивідуальним розміром
+const cardsDesc = document.querySelectorAll('.card__desc')
+cardsDesc.forEach(decs => {
+  decs.addEventListener('click', function(e){
+    let individContainer = document.querySelectorAll('.individual__desc')
+    const individualItemHTML = `
+          <div class="individual__container">
+              <div class="individual__content-item" data-pillowcase>
+                Наволочка:
+                <div class="individual__content-wrapper-param">
+                  <div class="individual__content-param">
+                     <input class="individual__content-param-inp" required data-pillowcase-lenght>
+                     <label class="inp-placeholder">Довжина(см)</label>
+                  </div>
+                  <div class="individual__content-param">
+                     <input class="individual__content-param-inp" required data-pillowcase-width>
+                     <label class="inp-placeholder">Ширина(см)</label>
+                  </div>
+                </div>
+              </div>
+              <div class="individual__content-item" data-duvetcover>
+                Підковдра:
+                <div class="individual__content-wrapper-param">
+                  <div class="individual__content-param">
+                     <input class="individual__content-param-inp" required data-duvetcover-lenght>
+                     <label class="inp-placeholder">Довжина(см)</label>
+                  </div>
+                  <div class="individual__content-param">
+                     <input class="individual__content-param-inp" required data-duvetcover-width>
+                     <label class="inp-placeholder">Ширина(см)</label>
+                  </div>
+                </div>
+              </div>
+              <div class="individual__content-item" data-bedsheet>
+                Простирадло:
+                <div class="individual__content-wrapper-param">
+                  <div class="individual__content-param">
+                     <input class="individual__content-param-inp" required data-bedsheet-lenght>
+                     <label class="inp-placeholder">Довжина(см)</label>
+                  </div>
+                  <div class="individual__content-param">
+                     <input class="individual__content-param-inp" required data-bedsheet-width>
+                     <label class="inp-placeholder">Ширина(см)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+        `;
+    if(e.target.closest('.flipswitch-cb')){
+      let idCheckBox = e.target.id
+                
+      if(e.target.checked){
+        decs.querySelector('.card__price').classList.add('hidden')
+        
+        individContainer.forEach(item => { 
+          if(item.id === idCheckBox) {
+            item.insertAdjacentHTML('afterBegin', individualItemHTML)
+          }
+        })
+      } else {
+        decs.querySelector('.card__price').classList.remove('hidden')
+
+        individContainer.forEach(item => {
+          
+          if(item.id === idCheckBox){
+            item.querySelector('.individual__container').classList.add('remove')
+          }
+        })
+      }
+    }
+  })
+})
 
 
 

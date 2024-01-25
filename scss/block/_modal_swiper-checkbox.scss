@@ -1,0 +1,99 @@
+.individual__content {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.individual__content-checkbox {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 12px;
+}
+.individual__container {
+	display: flex;
+	flex-direction: column;
+    width: 100%;
+    background-color: #8b70aa;
+    border-radius: 5px;
+    padding: 10px;
+    gap: 10px;
+    position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	
+	transform: translateY(-150%);
+  	animation: open 1s forwards;
+
+	&.remove {
+  		animation: close 1s forwards;
+		transform: translateY(0%);
+	}
+	
+}
+
+
+.individual__content-wrapper-param {
+	display: flex;
+	gap: 10px;
+}
+
+.individual__content-item {
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+  	transform: translateY(-150%);
+  	animation: open 1s forwards;
+
+  	&.remove {
+		transform: translateY(0%);
+  		animation: close 1s forwards;
+	}
+  	
+}
+
+.individual__content-param {
+	width: 75px;
+	position: relative;
+}
+.individual__content-param-inp {
+	width: 100%;
+	border-bottom: 1px solid white;
+	transition: border-color 0.4s ease-in;
+
+	&:focus{
+		border-color: black;
+	}
+}
+
+.individual__content-param-inp:focus + .inp-placeholder,
+.individual__content-param-inp:not(:focus):valid + .inp-placeholder {
+		top: -10px;
+		transform: scale(.85);
+		color: black;
+}
+
+.inp-placeholder {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: white;
+	font-size: 14px;
+	pointer-events: none;
+	transform-origin: left;
+	transition: top 0.4s, transform 0.4s, color 0.4s;
+
+}
+
+@keyframes open {
+  	0% {transform: translateY(-150%);}
+  	100% {transform: translateY(0);}
+}	
+
+ 
+@keyframes close {
+	0% {transform: translateY(0%);}
+	100% {transform: translateY(-150%);}
+}

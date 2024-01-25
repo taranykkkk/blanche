@@ -7,8 +7,16 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: all 0.2s ease-in;
+	transition: all 0.4s ease-in;
+	
+
+	&.close {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
+
+
 .modal__cart {
 	position: relative;
 	z-index: 2;
@@ -41,7 +49,7 @@
 }
 .cart__product {
 	display: grid;
-	grid-template-columns: 1fr 4fr 2fr 1fr 1fr;
+	grid-template-columns: 1fr 4fr 2fr 2fr 1fr;
 	column-gap: clamp(10px, -0.625rem + 6.25vw, 40px);
 	justify-content: center;
 	align-items: center;
@@ -56,6 +64,7 @@
 }
 .cart__product-name {
 	font-size: clamp(8px, 0.167rem + 1.67vw, 16px);
+	text-align: center;
 }
 .cart__product-count {
 	display: flex;
@@ -67,6 +76,7 @@
     font-weight: 700;
     padding-bottom: 1px;
     transition: opacity 0.2s ease-in;
+    font-size: clamp(10px, 0.28rem + 1.72vw, 20px);
 	
 	&:hover {
 		opacity: 0.7;
@@ -84,9 +94,17 @@
 }
 .cart__product-price {
 	font-size: clamp(8px, 0.167rem + 1.67vw, 16px);
+	text-align: center;
+
+	&::before {
+		content: '₴ ';
+	}
 }
 .cart__product-del {
 	justify-self: flex-end;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .product-del {
 	padding-right: 10px;
@@ -123,3 +141,4 @@
 	opacity: 0.7;
 	z-index: 0;
 }
+
