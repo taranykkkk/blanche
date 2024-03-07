@@ -313,37 +313,6 @@ cardsDesc.forEach(decs => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Slide
 const swiper = new Swiper('.swiper', {
   
